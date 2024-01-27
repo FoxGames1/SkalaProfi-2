@@ -44,11 +44,7 @@ $(document).ready(function(){
     });
 });
 
-$(document).ready(function(){
-   $('.header__burger').click(function(event) {
-      $('.header__burger, .navigation').toggleClass('active');
-   });
-});
+
 
 
 
@@ -89,3 +85,15 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var burger = document.querySelector('.header__burger');
+  var menu = document.querySelector('.header-content_menu');
+
+  burger.addEventListener('click', function () {
+    burger.classList.toggle('active');
+    menu.classList.toggle('active');
+  })
+});

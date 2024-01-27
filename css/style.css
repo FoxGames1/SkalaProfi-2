@@ -6,6 +6,8 @@ body{
 }
 
 .header {
+	width: 1519px;
+	height: 150px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -18,13 +20,13 @@ body{
 }
 
 .main {
-	width: 100%;
+	width: 1519px;
 	height: 4710px;
 }
 .main-content {
 	background: url(../img/main-BG.png);
 	margin: 0 auto;
-	width: 100%;
+	width: 1519px;
 	height: 374px;
 	background-size: cover;
 }
@@ -32,7 +34,7 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 100%;
+	width: 1519px;
 	height: 260px;
 	background: linear-gradient(91deg, #F1C93D 0%, rgba(203, 149, 43, 0.90) 25.37%, rgba(214, 151, 56, 0.79) 50%, #C3837F 100%);
 }
@@ -41,14 +43,18 @@ body{
 
 
 .header-content {
-	margin: 20px 19px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 
 .header-content_menu {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
 }
 .link {
 	color: black;
@@ -70,18 +76,20 @@ body{
 	height: 95px;
 }
 .button-link{
-	width: 146px;
-	height: 52px;
-	border-radius: 50px;
-	background: #9A1919;
-	padding: 7px 17px;
-	transition: .3s;
+	width: 141px;
+  height: 52px;
+  border-radius: 50px;
+  background: #9A1919;
+  padding: 7px 17px;
+  transition: .3s;
 }
 .button-link a{
+	width: 265px;
 	text-decoration: none;
 	color: #DFDFDF;
 	text-align: center;
 	font-family: 'Karla';
+	margin: -7px 0 0 0;
 	font-size: 24px;
 	font-style: normal;
 	font-weight: 700;
@@ -91,7 +99,118 @@ body{
 	background: #7e2b2b;
 }
 
+/*modal-window*/
+/* Стили для модального окна */
+.modal {
+	display: block;
+  position: absolute;
+  top: 63px;
+  left: 1122px;
+  width: 280px;
+  height: 100%;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+	z-index: 10;
+}
 
+.modal-content {
+	background: #ECD06F;
+	border-radius: 5px;
+	box-shadow: 0px 0px 15px 20px rgba(0, 0, 0, 0.25) inset;
+	margin: 87px 0px 0 -110px;
+	padding: 20px;
+	width: 500px;
+	transform: translateY(-50px);
+	opacity: 0;
+	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.close {
+  color: #000;
+  float: right;
+  font-size: 40px;
+	margin: -15px 10px;
+  font-weight: bold;
+	transition: color 0.3s ease-in-out;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(150, 29, 29);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/*elements-of-modal*/
+
+.phone {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 5px 95px;
+	color: #000;
+	text-align: center;
+	font-family: Karla;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+.phone img{
+	width: 35px;
+	height: 39px;
+}
+.location {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 3px;
+	margin: 5px 95px;
+	color: #000;
+	text-align: center;
+	font-family: Karla;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+.location img{
+	width: 40px;
+	margin: 0px 50px 0 0px;
+	height: 39px;
+}
+.txt{
+	color: #000;
+	text-align: center;
+	font-family: Inter;
+	font-size: 20px;
+	margin: 15px auto;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+.logo-name-modal{
+	margin: 0 auto;
+	width: 250px;
+
+}
+
+/*                        BURGER                  */
+
+.header__burger {
+  display: none;
+  cursor: pointer;
+}
+
+.header__burger span {
+  display: none;
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+	transition: .3s;
+}
 
 /*--------------------------------main--------------------------------*/
 
@@ -405,99 +524,3 @@ body{
 
 
 
-/*modal-window*/
-/* Стили для модального окна */
-.modal {
-	display: block;
-  position: absolute;
-  top: 47px;
-  left: 1091px;
-  width: 280px;
-  height: 100%;
-  cursor: pointer;
-  transition: opacity 0.3s ease-in-out;
-	z-index: 10;
-}
-
-.modal-content {
-	background: #ECD06F;
-	border-radius: 5px;
-	box-shadow: 0px 0px 15px 20px rgba(0, 0, 0, 0.25) inset;
-  margin: 87px 0px 0 -100px;
-  padding: 20px;
-  width: 500px;
-	transform: translateY(-50px);
-  opacity: 0;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.close {
-  color: #000;
-  float: right;
-  font-size: 40px;
-	margin: -15px 10px;
-  font-weight: bold;
-	transition: color 0.3s ease-in-out;
-}
-
-.close:hover,
-.close:focus {
-  color: rgb(150, 29, 29);
-  text-decoration: none;
-  cursor: pointer;
-}
-
-
-/*elements-of-modal*/
-
-.phone {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	margin: 5px 95px;
-	color: #000;
-	text-align: center;
-	font-family: Karla;
-	font-size: 24px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-}
-.phone img{
-	width: 35px;
-	height: 39px;
-}
-.location {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding-top: 3px;
-	margin: 5px 95px;
-	color: #000;
-	text-align: center;
-	font-family: Karla;
-	font-size: 24px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-}
-.location img{
-	width: 40px;
-	margin: 0px 50px 0 0px;
-	height: 39px;
-}
-.txt{
-	color: #000;
-	text-align: center;
-	font-family: Inter;
-	font-size: 20px;
-	margin: 15px auto;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-}
-.logo-name-modal{
-	margin: 0 auto;
-	width: 250px;
-
-}
